@@ -1,0 +1,154 @@
+:root {
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--cream);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  color: var(--dark-brown);
+}
+
+.card {
+  border-radius: 20px;
+  padding: 30px;
+  width: 500px;
+  margin: 20px;
+  background: var(--very-pale-orange);
+}
+
+.balance-card {
+  background: var(--soft-red);
+  position: relative;
+  color: white;
+}
+
+.balance {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.chart {
+  margin: 45px auto 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: var(--medium-brown);
+  text-align: center;
+  font-size: 16px;
+}
+
+.chart > div {
+  width: 100%;
+  position: relative;
+}
+
+.bar {
+  margin: 0 10px 8px;
+  background: var(--soft-red);
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: var(--dark-brown);
+  color: var(--cream);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  margin: 5px auto;
+  width: fit-content;
+  z-index: 1;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chart > div:hover > .tooltip, .active {
+  visibility: visible;
+}
+
+.chart > div:hover > .bar, .active {
+  opacity: 0.6;
+}
+
+.cyan {
+  background: var(--cyan);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--cream);
+  margin: 20px auto;
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--medium-brown);
+  padding-bottom: 10px;
+}
+
+.total {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--dark-brown);
+}
+
+.percentage {
+  text-align: right;
+  color: var(--dark-brown);
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    padding: 20px;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    position: static;
+    font-size: 14px;
+    transform: none;
+  }
+  .card {
+    width: 300px;
+  }
+
+  .chart > div {
+    width: 40px;
+  }
+}
