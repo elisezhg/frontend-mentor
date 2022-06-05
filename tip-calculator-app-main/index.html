@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <form action="#">
+      <div class="card">
+        <div class="input-section">
+          <div class="bill-container">
+            <label for="bill">Bill</label>
+            <p class="error-message"></p>
+            <div>
+              <img src="./images/icon-dollar.svg" alt="dollar icon" />
+              <input type="text" id="bill" name="bill" placeholder="0" />
+            </div>
+          </div>
+
+          <div class="percentage-container">
+            <label for="percentage">Select Tip %</label>
+            <p class="error-message"></p>
+
+            <div class="percentage-btns">
+              <input type="radio" name="percentage" id="p5" value="5" />
+              <label for="p5">5%</label>
+
+              <input type="radio" name="percentage" id="p10" value="10" />
+              <label for="p10">10%</label>
+
+              <input type="radio" name="percentage" id="p15" value="15" />
+              <label for="p15">15%</label>
+
+              <input type="radio" name="percentage" id="p25" value="25" />
+              <label for="p25">25%</label>
+
+              <input type="radio" name="percentage" id="p50" value="50" />
+              <label for="p50">50%</label>
+
+              <input type="text" placeholder="Custom" id="custom" />
+            </div>
+          </div>
+
+          <div class="nb-people-container">
+            <label for="nb-people">Number of People</label>
+            <p class="error-message"></p>
+            <div>
+              <img src="./images/icon-person.svg" alt="person icon" />
+              <input
+                type="text"
+                id="nb-people"
+                name="nb-people"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="amount-section">
+          <div class="tip-amount-container">
+            <div>
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <p class="tip-amount amount">$0.00</p>
+          </div>
+
+          <div class="total-amount-container">
+            <div>
+              <p>Total Amount</p>
+              <p>/ person</p>
+            </div>
+            <p class="total-amount amount">$0.00</p>
+          </div>
+
+          <button type="reset" id="reset" disabled>RESET</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

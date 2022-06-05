@@ -7,3 +7,5 @@ List of the solutions:
 - FAQ accordion card 
 - NFT preview card component
 - QR code component
+- Advice generator app
+- Tip calculator app
