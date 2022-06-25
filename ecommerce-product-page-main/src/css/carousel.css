@@ -1,0 +1,37 @@
+.carousel {
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  /* max-height: 600px; */
+}
+
+.carousel-spotlight {
+  aspect-ratio: 1;
+  border-radius: 15px;
+}
+
+.carousel-items {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.carousel-items > img {
+  border-radius: 10px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.carousel-items > :hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.carousel-items .selected {
+  opacity: 0.5;
+  outline: 2px solid var(--orange);
+  outline-offset: -2px;
+}

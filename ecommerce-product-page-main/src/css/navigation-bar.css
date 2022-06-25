@@ -1,0 +1,28 @@
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 42px;
+  border-bottom: 1px solid var(--Light-grayish-blue);
+  padding: 20px 0;
+}
+
+.navigation-bar-items {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 24px;
+  color: var(--dark-grayish-blue);
+}
+
+.avatar {
+  width: 50px;
+}
+
+.avatar:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  outline: 1px solid var(--orange);
+  outline-offset: -1px;
+}
